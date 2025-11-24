@@ -1,0 +1,1799 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruvimbo Mashinge - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "f15e420750cd42b9ab0ceff07ab60352"}'></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="icon" type="image/png" href="lg.png">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        :root {
+          --bg-dark: #021F1A;            /* Very dark emerald green/black */
+          --panel-bg: #043D32;           /* Slightly lighter panel background */
+          --accent-primary: #2ECC71;     /* Bright emerald green */
+          --accent-secondary: #1ABC9C;   /* Lighter teal-green for secondary highlights */
+          --text-primary: #E0F8F1;       /* Light mint/greenish white */
+          --text-secondary: #A0D5C2;     /* Soft pastel green */
+          --border-color: rgba(46, 204, 113, 0.2); /* Subtle emerald accent border */
+          --glow-color: rgba(46, 204, 113, 0.3);   /* Emerald green glow */
+          --mobile-nav-height: 60px;
+        }
+
+
+        html {
+            font-size: 16px;
+        }
+        @media (max-width: 640px) {
+            html {
+                font-size: 14px;
+            }
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            padding-bottom: var(--mobile-nav-height);
+        }
+
+        .panel {
+            background-color: var(--panel-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 0.75rem;
+            box-shadow: 0 0 10px rgba(0,0,0,0.15), 0 0 3px var(--glow-color);
+        }
+
+        .accent-text { color: var(--accent-primary); }
+        .accent-bg { background-color: var(--accent-primary); }
+        .accent-border { border-color: var(--accent-primary); }
+
+        .section-title {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 8px;
+            font-size: 1.25rem;
+            white-space: nowrap;
+        }
+        @media (min-width: 640px) {
+            .section-title {
+                font-size: 1.4rem;
+            }
+        }
+        @media (min-width: 768px) {
+            .section-title {
+                font-size: 1.6rem;
+            }
+        }
+        @media (min-width: 1024px) {
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+            border-radius: 2px;
+            box-shadow: 0 0 8px var(--glow-color);
+        }
+        @media (min-width: 640px) {
+            .section-title::after {
+                width: 70px;
+            }
+        }
+
+
+        h1 {
+            font-size: 1.4rem;
+            line-height: 1.2;
+        }
+        h2 {
+            font-size: 1.25rem;
+            line-height: 1.3;
+        }
+        h3 {
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+        h4 {
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+        h5 {
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+
+        @media (min-width: 640px) {
+            h1 {
+                font-size: 1.6rem;
+            }
+            h2 {
+                font-size: 1.4rem;
+            }
+            h3 {
+                font-size: 1.1rem;
+            }
+            h4 {
+                font-size: 1rem;
+            }
+            h5 {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.6rem;
+            }
+            h3 {
+                font-size: 1.25rem;
+            }
+            h4 {
+                font-size: 1.1rem;
+            }
+            h5 {
+                font-size: 1rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.8rem;
+            }
+            h3 {
+                font-size: 1.4rem;
+            }
+            h4 {
+                font-size: 1.2rem;
+            }
+            h5 {
+                font-size: 1.1rem;
+            }
+        }
+
+
+        section {
+            padding: 3rem 0;
+        }
+        @media (min-width: 768px) {
+            section {
+                padding: 5rem 0;
+            }
+        }
+
+
+        .container {
+            padding-left: 0.75rem;
+            padding-right: 0.75rem;
+        }
+        @media (min-width: 640px) {
+            .container {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+        }
+        @media (min-width: 768px) {
+            .container {
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+            }
+        }
+        @media (min-width: 1024px) {
+            .container {
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+        }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-dark); }
+        ::-webkit-scrollbar-thumb { background: var(--accent-primary); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #a6a7a8; }
+
+        .typed-cursor {
+            opacity: 1;
+            animation: blink 0.7s infinite;
+            color: var(--accent-primary);
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        .hero-bg-grid {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                linear-gradient(to right, rgba(0, 169, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0, 169, 255, 0.05) 1px, transparent 1px);
+            background-size: 30px 30px;
+            z-index: 0;
+            animation: pulseGrid 15s infinite alternate;
+        }
+        @keyframes pulseGrid {
+            from { opacity: 0.2; transform: scale(1); }
+            to { opacity: 0.5; transform: scale(1.02); }
+        }
+
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+            padding: 0.25rem 0;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--accent-primary);
+            transition: width 0.3s ease, background-color 0.3s ease;
+        }
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+        .nav-link:hover {
+            color: var(--accent-primary);
+        }
+        .nav-link.active {
+            color: var(--accent-primary);
+        }
+
+
+        .btn-primary {
+            background: linear-gradient(90deg, var(--accent-primary), #007FBF);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 169, 255, 0.2);
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 6px 20px rgba(168, 250, 97, 0.4);
+        }
+        .btn-secondary {
+            background-color: rgba(255,255,255,0.03);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+             padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .btn-secondary:hover {
+            background-color: rgba(30, 70, 36, 0.1);
+            border-color: var(--accent-primary);
+            color: var(--accent-primary);
+        }
+
+        .skill-card, .project-card, .timeline-item-panel {
+            background-color: var(--panel-bg);
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        .skill-card:hover, .project-card:hover, .timeline-item-panel:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.25), 0 0 15px var(--glow-color);
+            border-color: var(--accent-primary);
+        }
+
+        /* Updated Skill icon size */
+        .skill-card i {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            color: var(--accent-primary);
+        }
+        .skill-card i.colored {
+            color: inherit;
+        }
+         .skill-card h3 {
+            font-size: 0.875rem;
+        }
+        @media (min-width: 768px) {
+            .skill-card i {
+                font-size: 2.25rem;
+            }
+            .skill-card h3 {
+                font-size: 1rem;
+            }
+        }
+        .skill-category-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--accent-secondary);
+            margin-bottom: 1.5rem;
+            text-align: center;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+
+        .project-card img { transition: transform 0.3s ease-out; }
+        .project-card:hover img { transform: scale(1.03); }
+        .project-card {
+            transition: all 0.3s ease;
+            opacity: 1;
+            transform: scale(1);
+            height: auto;
+            visibility: visible;
+        }
+        .project-card.hidden-project {
+            opacity: 0;
+            transform: scale(0.8);
+            height: 0;
+            margin: 0;
+            padding: 0;
+            visibility: hidden;
+            position: absolute;
+        }
+
+        .project-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+        .project-tech-stack span {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            background-color: rgba(41, 116, 64, 0.05);
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            border: 1px solid rgba(14, 39, 10, 0.1);
+        }
+        .project-tech-stack i {
+            font-size: 1rem;
+        }
+
+
+        .form-input, .form-textarea {
+            background-color: #0F172A;
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            border-radius: 0.5rem;
+            padding: 0.75rem;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .form-input:focus, .form-textarea:focus {
+            outline: none;
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 0 2px var(--glow-color);
+        }
+
+        #custom-alert {
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .modal-hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        #custom-alert-content {
+            transition: transform 0.3s ease-in-out;
+        }
+        .modal-hidden #custom-alert-content {
+            transform: scale(0.95);
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 42rem;
+            margin: 0 auto;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 3px;
+            background: linear-gradient(to bottom, var(--accent-primary), var(--accent-secondary));
+            box-shadow: 0 0 5px var(--glow-color);
+            top: 0;
+            bottom: 0;
+            left: 1.75rem;
+            margin-left: -1.5px;
+            border-radius: 3px;
+        }
+        .timeline-item-container {
+            padding-left: 3.5rem;
+            position: relative;
+            margin-bottom: 2.5rem;
+        }
+        .timeline-item-container:last-child {
+            margin-bottom: 0;
+        }
+        .timeline-icon {
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform: translateX(calc(1.75rem - 50% + 1.5px));
+            background-color: var(--accent-primary);
+            color: var(--bg-dark);
+            border-radius: 50%;
+            width: 2.5rem;
+            height: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            box-shadow: 0 0 10px var(--glow-color);
+        }
+        .timeline-item-panel {
+            border-radius: 0.5rem;
+        }
+         /* Education dates alignment */
+        .education-item-header {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 0.25rem;
+        }
+        .education-item-header h3 {
+             margin-bottom: 0.25rem;
+        }
+        .education-item-header span {
+            white-space: nowrap;
+        }
+
+        @media (min-width: 640px) {
+            .education-item-header {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: baseline;
+            }
+            .education-item-header h3 {
+                margin-bottom: 0;
+            }
+             .education-item-header span {
+                margin-top: 0;
+            }
+        }
+
+
+        .filter-btn {
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            border-radius: 0.375rem;
+            transition: all 0.3s ease;
+            font-size: 0.875rem;
+            background-color: rgba(10, 15, 26, 0.5);
+        }
+        .filter-btn:hover {
+            color: var(--accent-primary);
+            border-color: var(--accent-primary);
+            background-color: rgba(0, 169, 255, 0.1);
+        }
+        .filter-btn.active {
+            color: var(--bg-dark);
+            background-color: var(--accent-primary);
+            border-color: var(--accent-primary);
+            font-weight: 600;
+            box-shadow: 0 0 10px var(--glow-color);
+        }
+
+        /* Mobile Bottom Navigation */
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: var(--mobile-nav-height);
+            background-color: var(--panel-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-top: 1px solid var(--border-color);
+            z-index: 50;
+        }
+
+        .mobile-nav-items {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100%;
+        }
+
+        .mobile-nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.75rem;
+            padding: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-nav-item.active {
+            color: var(--accent-primary);
+        }
+
+        .mobile-nav-item i {
+            font-size: 1.25rem;
+            margin-bottom: 0.25rem;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-nav {
+                display: block;
+            }
+
+            /* Hide desktop nav on mobile */
+            #navbar nav {
+                display: none;
+            }
+
+            /* Adjust section padding for mobile */
+            section {
+                padding-top: 2rem !important;
+                padding-bottom: 2rem !important;
+            }
+
+            /* Adjust hero section for mobile */
+            #hero {
+                min-height: calc(100vh - var(--mobile-nav-height));
+                padding-top: 4rem;
+            }
+
+            /* Adjust headings for mobile */
+            h1 {
+                font-size: 2.5rem !important;
+            }
+            h2 {
+                font-size: 2rem !important;
+            }
+            h3 {
+                font-size: 1.5rem !important;
+            }
+
+            /* Adjust container padding for mobile */
+            .container {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+
+            /* Adjust grid layouts for mobile */
+            .grid {
+                gap: 1rem !important;
+            }
+
+            /* Adjust card padding for mobile */
+            .panel {
+                padding: 1rem !important;
+            }
+        }
+
+        .skills-container {
+            overflow: hidden;
+            padding: 0 2rem;
+            position: relative;
+            touch-action: pan-y pinch-zoom;
+            margin: 0 -1rem; /* Negative margin to compensate for container padding */
+        }
+        #skillsTrack {
+            display: flex;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            will-change: transform;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            padding: 0 1rem; /* Add padding to ensure last slide is visible */
+        }
+        .skill-slide {
+            flex: 0 0 auto;
+            transition: opacity 0.3s ease;
+            width: calc(100% - 2rem); /* Adjust width to account for padding */
+        }
+        @media (min-width: 640px) {
+            .skill-slide {
+                width: calc(50% - 2rem); /* For 2 slides on tablet */
+            }
+        }
+        @media (min-width: 1024px) {
+            .skill-slide {
+                width: calc(33.333% - 2rem); /* For 3 slides on desktop */
+            }
+        }
+
+        /* Timeline panel title size fix for mobile */
+        .timeline-title {
+            font-size: 0.95rem !important;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.15rem;
+        }
+        @media (min-width: 640px) {
+            .timeline-title {
+                font-size: 1.05rem !important;
+            }
+        }
+        @media (min-width: 1024px) {
+            .timeline-title {
+                font-size: 1.15rem !important;
+            }
+        }
+
+        /* Smaller skill category title for mobile */
+        .skill-category-title-mini {
+            font-size: 0.75rem !important;
+            font-weight: 700;
+            color: var(--accent-primary);
+            margin-bottom: 0.5rem;
+        }
+        @media (min-width: 640px) {
+            .skill-category-title-mini { font-size: 0.85rem !important; }
+        }
+        @media (min-width: 1024px) {
+            .skill-category-title-mini { font-size: 0.95rem !important; }
+        }
+        /* Smaller project card title for mobile */
+        .project-title-mini {
+            font-size: 1.05rem !important;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.25rem;
+        }
+        @media (min-width: 640px) {
+            .project-title-mini { font-size: 1.10rem !important; }
+        }
+        @media (min-width: 1024px) {
+            .project-title-mini { font-size: 1.20rem !important; }
+        }
+
+        .leading-relaxed {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1.1rem;
+            }
+            @media (min-width: 640px) {
+            .leading-relaxed {
+                font-size: 1.05rem;
+                line-height: 1.7;
+            }
+            }
+            @media (min-width: 1024px) {
+            .leading-relaxed {
+                font-size: 1.15rem;
+                line-height: 1.75;
+            }
+        }
+
+        .logo-img {
+          height: 2.5rem;
+          max-width: 120px;
+          width: auto;
+          object-fit: contain;
+        }
+        @media (min-width: 640px) {
+          .logo-img { height: 4rem; max-width: 160px; }
+        }
+        @media (min-width: 768px) {
+          .logo-img { height: 5rem; max-width: 180px; }
+        }
+
+        .highlight {
+          
+          color: #66f18d;            /* Deep emerald text */
+          padding: 2px 6px;
+          border-radius: 5px;
+          font-weight: bold;
+         }
+
+    </style>
+</head>
+<body class="antialiased">
+
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                 <!-- <a href="#hero" class="text-3xl font-bold accent-text tracking-wider">RK</a> -->
+                <a href="#hero" class="flex items-center">
+                    <img src="lg.png" alt="RM Logo" class="logo-img">
+                </a>
+                <nav class="hidden md:flex space-x-5 items-center">
+                    <a href="#hero" class="nav-link text-gray-300">Home</a>
+                    <a href="#about" class="nav-link text-gray-300">About</a>
+                    <a href="#experience" class="nav-link text-gray-300">Experience</a>
+                    <a href="#education" class="nav-link text-gray-300">Education</a>
+                    <a href="#skills" class="nav-link text-gray-300">Skills</a>
+                    <a href="#portfolio" class="nav-link text-gray-300">Portfolio</a>
+                    <a href="#contact" class="nav-link text-gray-300">Contact</a>
+                    <a href="Ruvimbo Mashinge Resume.pdf" rel="noopener" download class="btn-primary text-sm ml-2">
+                        Download CV
+                    </a>
+                </nav>
+                <button id="mobile-menu-button" class="md:hidden text-gray-300 hover:accent-text focus:outline-none">
+                    <i data-lucide="menu" class="w-7 h-7"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-opacity-90 backdrop-blur-md" style="background-color: var(--panel-bg);">
+            <nav class="px-2 pt-2 pb-4 space-y-1 sm:px-3">
+                <a href="#hero" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:accent-text hover:bg-opacity-20 hover:bg-sky-500">Home</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:accent-text hover:bg-opacity-20 hover:bg-sky-500">About</a>
+                <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:accent-text hover:bg-opacity-20 hover:bg-sky-500">Experience</a>
+                <a href="#education" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:accent-text hover:bg-opacity-20 hover:bg-sky-500">Education</a>
+                <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:accent-text hover:bg-opacity-20 hover:bg-sky-500">Skills</a>
+                <a href="#portfolio" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:accent-text hover:bg-opacity-20 hover:bg-sky-500">Portfolio</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:accent-text hover:bg-opacity-20 hover:bg-sky-500">Contact</a>
+                <a href="Ruvimbo Mashinge Resume.pdf"  rel="noopener" download class="block mt-2 px-3 py-3 text-base font-medium text-white accent-bg hover:bg-sky-600 rounded-lg text-center">
+                    Download CV
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="min-h-screen flex items-center justify-center pt-20 relative">
+            <div class="hero-bg-grid"></div>
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                <img src="image3.jpg" alt="Ruvimbo Mashinge" class="w-36 h-36 md:w-44 md:h-44 rounded-full object-cover border-4 border-[var(--accent-primary)] mx-auto mb-6 shadow-xl shadow-[var(--glow-color)]">
+                <h1 class="text-5xl md:text-7xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-sky-300 via-sky-400 to-indigo-400">
+                    Hi, I'm <span class="accent-text">Ruvimbo Mashinge</span>
+                </h1>
+                <p class="text-2xl md:text-3xl font-medium mb-8 text-gray-300">
+                    <span id="typed-text" class="font-semibold"></span><span class="typed-cursor">|</span>
+                </p>
+                <p class="max-w-2xl mx-auto text-lg text-gray-400 mb-10">
+                    Where insight meets integrity! Data. Security. The Full Spectrum.
+                </p>
+                <div class="space-y-4 sm:space-y-0 sm:space-x-6 flex flex-col sm:flex-row justify-center">
+                    <a href="#portfolio" class="btn-primary text-sm">
+                        View My Work
+                    </a>
+                    <a href="#contact" class="btn-secondary text-sm">
+                        Get In Touch
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section id="about" class="py-20 md:py-32">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="section-title text-4xl font-bold">About Me</h2>
+                </div>
+                <div class="max-w-3xl mx-auto text-left text-gray-300 space-y-6">
+                    <p>Welcome to my page. I’m Ruvimbo Mashinge, a passionate data analytics and cybersecurity enthusiast. I am particularly interested in the intersection between data-driven insights and the critical importance of securing that data.</p>
+                    <p>Considering the immense value that data analytics can deliver—potentially generating millions in profit—it raises a critical question: if data can yield such returns, are we prepared to lose it all to cyber threats? This realization sparked my interest in combining <span class="highlight">Data Analytics</span> with <span
+                                class="highlight">Cybersecurity</span>, enabling me to develop a unique and complementary skill set.</p> 
+                    <p>Outside of the tech world, I’m fortunate to share life with a supportive and caring husband. Our relationship brings balance and joy to my life, and we enjoy spending time together—whether it’s exploring new places or simply unwinding at home. In my free time, I also enjoy baking, which allows me to relax and express creativity in a different way. </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="py-20 md:py-32 bg-opacity-50" style="background-color: rgba(10, 15, 26, 0.7);">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="section-title text-4xl font-bold">Work Experience</h2>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item-container">
+                        <div class="timeline-icon"><i data-lucide="briefcase" class="w-5 h-5"></i></div>
+                        <div class="timeline-item-panel panel p-6">
+                            <div class="education-item-header">
+                                <h3 class="timeline-title">Information Technology Coordinator</h3>
+                                <span class="text-sm text-gray-400">Feb 2022 - Jan 2025</span>
+                            </div>
+                            <p style="color: #66f18d;" class="text-md mb-2">Plan International, Harare, Zimbabwe</p>
+                            <ul class="list-disc list-inside text-gray-400 space-y-1 text-sm">
+                                    <li>Implemented security controls for 350+ endpoints, achieving 99.99% compliance with Plan International's IT security standards.</li>
+                                    <li>Co-developed 2 DR and BCP plans, improving RTO by 30% and minimizing disruption during breach simulations.</li>
+                                    <li>Oversaw security for 10+ critical systems through updates, patching, and risk assessments, enhancing audit readiness by 40%.</li>
+                                    <li>Performed in-depth analysis of logs, threat data, and IT assets to uncover risks and compliance gaps, and proposed mitigation strategies.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                     <div class="timeline-item-container">
+                        <div class="timeline-icon"><i data-lucide="briefcase" class="w-5 h-5"></i></div>
+                        <div class="timeline-item-panel panel p-6">
+                            <div class="education-item-header">
+                                <h3 class="timeline-title">Information Technology Intern</h3>
+                                <span class="text-sm text-gray-400">Sep 2019 - Sep 2020</span>
+                            </div>
+                            <p style="color: #66f18d;" class="text-md mb-2"> Plan International, Harare, Zimbabwe</p>
+                            <ul class="list-disc list-inside text-gray-400 space-y-1 text-sm">
+                                  <li>Monitored network traffic to identify vulnerabilities, ensuring timely resolution and maintained 99.9% uptime.</li>
+                                  <li>Managed 200+ IT assets, improving inventory tracking, accountability, and compliance with global IT policies .</li>
+                                  <li>Provided IT support to 300+ users, troubleshooting issues and enforcing secure practices like multi-factor authentication and secure file sharing .</li>
+                                  
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="py-20 md:py-32">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="section-title text-4xl font-bold">Education</h2>
+                </div>
+                 <div class="timeline">
+                    <div class="timeline-item-container">
+                        <div class="timeline-icon"><i data-lucide="graduation-cap" class="w-5 h-5"></i></div>
+                        <div class="timeline-item-panel panel p-6">
+                            <div class="education-item-header">
+                                <h3 class="timeline-title">MSc. in Cybersecurity (MSCS)</h3>
+                                <span class="text-sm text-gray-400">Jan 2025 - Dec 2026</span>
+                            </div>
+                            <p style="color: #66f18d;" class="text-md mb-2">Yeshiva University – Katz School of Science and Health</p>
+                            <p class="text-gray-400 text-sm">STEM credentialed program.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item-container">
+                        <div class="timeline-icon"><i data-lucide="graduation-cap" class="w-5 h-5"></i></div>
+                        <div class="timeline-item-panel panel p-6">
+                           <div class="education-item-header">
+                                <h3 class="timeline-title">MSc. in Big Data Analytics (MSBDA)</h3>
+                                <span class="text-sm text-gray-400">Jul 2022 - May 2024</span>
+                            </div>
+                            <p style="color: #66f18d;" class="text-md mb-2">Chinhoyi University of Technology</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item-container">
+                        <div class="timeline-icon"><i data-lucide="graduation-cap" class="w-5 h-5"></i></div>
+                        <div class="timeline-item-panel panel p-6">
+                           <div class="education-item-header">
+                                <h3 class="timeline-title">BSc. Honors Degree in Computer Science (BCS)</h3>
+                                <span class="text-sm text-gray-400">Aug 2017 - Sep 2021</span>
+                            </div>
+                            <p style="color: #66f18d;" class="text-md mb-2">University of Zimbabwe</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <section id="skills" class="py-20 md:py-32">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="section-title text-4xl font-bold">Technical Skills</h2>
+                </div>
+
+                <!-- Skills Carousel -->
+                <div class="relative max-w-4xl mx-auto">
+                    <!-- Navigation Buttons -->
+                    <button id="prevSkill" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-[var(--panel-bg)] p-2 rounded-full shadow-lg hover:bg-opacity-80 transition-all hidden sm:block">
+                        <i data-lucide="chevron-left" class="w-6 h-6 text-[var(--accent-primary)]"></i>
+                    </button>
+                    <button id="nextSkill" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-[var(--panel-bg)] p-2 rounded-full shadow-lg hover:bg-opacity-80 transition-all hidden sm:block">
+                        <i data-lucide="chevron-right" class="w-6 h-6 text-[var(--accent-primary)]"></i>
+                    </button>
+
+                    <!-- Skills Container -->
+                    <div class="skills-container overflow-hidden px-4 sm:px-12">
+                        <div id="skillsTrack" class="flex transition-transform duration-500 ease-out">
+                            <!-- Cloud Platforms -->
+                            <div class="skill-slide w-[280px] sm:w-[320px] lg:w-[300px] flex-shrink-0 px-2 sm:px-3">
+                                <div class="panel p-3 sm:p-4 h-full">
+                                    <h3 class="text-sm sm:text-base font-bold mb-3 sm:mb-4 text-[var(--accent-primary)]">Cloud Platforms</h3>
+                                    <div class="grid grid-cols-1 gap-2 sm:gap-3">
+                                        <div class="flex items-center gap-2 hover:translate-x-1 transition-transform">
+                                            <i class="devicon-amazonwebservices-plain colored text-base sm:text-lg"></i>
+                                            <span class="text-xs sm:text-sm text-gray-300">Amazon AWS</span>
+                                        </div>
+                                        <div class="flex items-center gap-2 hover:translate-x-1 transition-transform">
+                                            <i class="devicon-azure-plain colored text-base sm:text-lg"></i>
+                                            <span class="text-xs sm:text-sm text-gray-300">Microsoft Azure</span>
+                                        </div>
+                                        <div class="flex items-center gap-2 hover:translate-x-1 transition-transform">
+                                            <i class="devicon-googlecloud-plain colored text-base sm:text-lg"></i>
+                                            <span class="text-xs sm:text-sm text-gray-300">Google Cloud</span>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Databases -->
+                            <div class="skill-slide w-[280px] sm:w-[320px] lg:w-[300px] flex-shrink-0 px-2 sm:px-3">
+                                <div class="panel p-3 sm:p-4 h-full">
+                                    <h3 class="text-sm sm:text-base font-bold mb-3 sm:mb-4 text-[var(--accent-primary)]">Databases</h3>
+                                    <div class="grid grid-cols-1 gap-2 sm:gap-3">
+                                        <div class="flex items-center gap-2">
+                                            <i class="devicon-mongodb-plain colored text-base sm:text-lg"></i>
+                                            <span class="text-xs sm:text-sm text-gray-300">MongoDB</span>
+                                        </div>
+                                        <div class="flex items-center gap-2">
+                                            <i class="devicon-mysql-plain colored text-base sm:text-lg"></i>
+                                            <span class="text-xs sm:text-sm text-gray-300">MySQL</span>
+                                        </div>
+                                        <div class="flex items-center gap-2">
+                                            <i class="devicon-postgresql-plain colored text-base sm:text-lg"></i>
+                                            <span class="text-xs sm:text-sm text-gray-300">Postgres</span>
+                                        </div>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Programming Languages -->
+                            <div class="skill-slide w-[280px] sm:w-[320px] lg:w-[300px] flex-shrink-0 px-2 sm:px-3">
+                                <div class="panel p-3 sm:p-4 h-full">
+                                    <h3 class="text-sm sm:text-base font-bold mb-3 sm:mb-4 text-[var(--accent-primary)]">Programming Languages</h3>
+                                    <div class="grid grid-cols-1 gap-2 sm:gap-3">
+                                        <div class="flex items-center gap-2">
+                                            <i class="devicon-python-plain colored text-base sm:text-lg"></i>
+                                            <span class="text-xs sm:text-sm text-gray-300">Python</span>
+                                        </div>
+                                        <div class="flex items-center gap-2">
+                                            <i class="devicon-sqldeveloper-plain colored text-base sm:text-lg"></i>
+                                            <span class="text-xs sm:text-sm text-gray-300">SQL</span>
+                                        </div>
+                                        <div class="flex items-center gap-2">
+                                            <i class="devicon-powershell-plain colored text-base sm:text-lg"></i>
+                                            <span class="text-xs sm:text-sm text-gray-300">Powershell</span>
+                                        </div>
+                                        <div class="flex items-center gap-2">
+                                            <i class="devicon-bash-plain colored text-base sm:text-lg"></i>
+                                            <span class="text-xs sm:text-sm text-gray-300">Bash</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Data Science & ML -->
+                            <div class="skill-slide w-[280px] sm:w-[320px] lg:w-[300px] flex-shrink-0 px-2 sm:px-3">
+                                <div class="panel p-3 sm:p-4 h-full">
+                                    <h3 class="text-sm sm:text-base font-bold mb-3 sm:mb-4 text-[var(--accent-primary)]">Data Science & ML</h3>
+                                    <div class="grid grid-cols-1 gap-2 sm:gap-3">
+                                        <div class="flex items-center gap-2">
+                                            <i class="devicon-tensorflow-original colored text-base sm:text-lg"></i>
+                                            <span class="text-xs sm:text-sm text-gray-300">TensorFlow</span>
+                                        </div>
+                                        <div class="flex items-center gap-2">
+                                            <i class="devicon-scikitlearn-plain colored text-base sm:text-lg"></i>
+                                            <span class="text-xs sm:text-sm text-gray-300">scikit-learn</span>
+                                        </div>
+                                        <div class="flex items-center gap-2">
+                                            <i class="devicon-pandas-plain text-base sm:text-lg"></i>
+                                            <span class="text-xs sm:text-sm text-gray-300">Pandas</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+        
+                                    
+
+                        <!--  Data Visualisation-->
+                            <div class="skill-slide w-[280px] sm:w-[320px] lg:w-[300px] flex-shrink-0 px-2 sm:px-3">
+                                <div class="panel p-3 sm:p-4 h-full">
+                                    <h3 class="text-sm sm:text-base font-bold mb-3 sm:mb-4 text-[var(--accent-primary)]">Visualization</h3>
+                                    <div class="grid grid-cols-1 gap-2 sm:gap-3">
+                                        <div class="flex items-center gap-2">
+                                            <i class="fas fa-chart-bar text-base sm:text-lg text-[var(--accent-primary)]"></i>
+                                            <span class="text-xs sm:text-sm text-gray-300">Power BI</span>
+                                        </div>
+                                        <div class="flex items-center gap-2">
+                                            <i class="fas fa-chart-bar text-base sm:text-lg text-[var(--accent-primary)]"></i>
+                                            <span class="text-xs sm:text-sm text-gray-300">Tableau</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dots Navigation -->
+                    <div class="flex justify-center gap-2 mt-6">
+                        <button class="skill-dot w-2 h-2 rounded-full bg-gray-600 transition-all" data-index="0"></button>
+                        <button class="skill-dot w-2 h-2 rounded-full bg-gray-600 transition-all" data-index="1"></button>
+                        <button class="skill-dot w-2 h-2 rounded-full bg-gray-600 transition-all" data-index="2"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="py-20 md:py-32 bg-opacity-50" style="background-color: rgba(10, 15, 26, 0.7);">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="section-title text-4xl font-bold">My Portfolio</h2>
+                </div>
+                <div id="project-filters" class="flex flex-wrap justify-center gap-3 mb-10">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="projects">Projects</button>
+                    <button class="filter-btn" data-filter="certificates">Certifications & Trainings</button>
+                    <button class="filter-btn" data-filter="volunteer">Volunteer</button>
+                </div>
+
+                <div id="projects-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+                    <div class="project-card rounded-xl overflow-hidden group" data-categories="certificates">
+    <img src="ms.png" alt="leadauditor" class="w-full h-56 object-cover">
+
+    <div class="p-6">
+        <h3 class="project-title-mini">Lead Auditor</h3>
+        <p class="text-gray-400 mb-3 text-sm leading-relaxed">
+               An ISO 27001 Lead Implementer is a professional who guides an organization in establishing, implementing, and maintaining an effective Information Security Management System (ISMS) based on the ISO/IEC 27001 standard. They ensure the ISMS aligns with the organization's specific context and objectives, meeting legal, industry, and internal information security requirements.
+        </p>
+        <div class="project-tech-stack flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-sky-400 mb-4">
+            <span class="font-semibold mr-1 text-gray-300">Skills:</span>
+            <span><i img src="leadauditor.png"></i> IS027001 ISMS </span>
+        
+        </div>
+        <div class="flex space-x-3">
+            <a href="https://www.credly.com/badges/3c5e3d28-aed2-44f9-a5ab-872f3b5a1973/linked_in_profile" target="_blank" class="btn-primary text-sm inline-flex items-center">
+                <img src="credly.png" alt="Credly" class="w-4 h-4 mr-2 inline-block object-contain"  title="Credly">View on Credly</a>
+<!--            <a href="#" target="_blank" class="text-sm inline-flex items-center bg-red-600 text-white px-3 py-1.5 rounded hover:bg-red-700">-->
+<!--                <i data-lucide="play-circle" class="w-4 h-4 mr-2"></i>Live Demo-->
+<!--            </a>-->
+        </div>
+    </div>
+</div>
+                     <div class="project-card rounded-xl overflow-hidden group" data-categories="certificates">
+                    <img src="isc2.jpeg" alt="isc2" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="project-title-mini">ISC2 CC</h3>
+                        <p class="text-gray-400 mb-3 text-sm leading-relaxed">
+                            The certification covers five key domains: security principles, business continuity/disaster recovery/incident response, access controls, network security, and security operations. certification that validates foundational knowledge and skills in cybersecurity, including security principles, network security, access controls, and incident response, for individuals starting their career in the field.
+                        </p>
+                        <div class="project-tech-stack flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-sky-400 mb-4">
+                            <span class="font-semibold mr-1 text-gray-300">Skills:</span>
+                            <span>Security principles IAM  </span>
+                
+
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="https://www.credly.com/badges/774daa68-001e-4ec6-b650-d359693b6a7e/linked_in_profile" target="_blank" class="btn-primary text-sm inline-flex items-center">
+                                <img src="credly.png" alt="Credly" class="w-4 h-4 mr-2 inline-block object-contain"  title="Credly">View on Credly</a>
+                            </a>
+                
+                        </div>
+                    </div>
+                </div>
+                     <div class="project-card rounded-xl overflow-hidden group" data-categories="projects">
+                    <img src="url.png" alt="url" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="project-title-mini">Malicious URL Link Detector</h3>
+                        <p class="text-gray-400 mb-3 text-sm leading-relaxed">
+                            The Malicious URL Link Detector leverages machine learning algorithms to classify URLs as either legitimate or suspicious based on a range of features extracted from the URL text. These features include URL length, presence of special characters, domain name patterns, use of HTTPS, and more.
+                        </p>
+                        <div class="project-tech-stack flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-sky-400 mb-4">
+                            <span class="font-semibold mr-1 text-gray-300">Skills:</span>
+                            <span>Feature Engineering</span>
+                            <span>URL Protocols</span>
+                            <span>ML Models</span>
+                            
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="https://github.com/mruvimbo/Malicious-URL-Link" target="_blank" class="btn-primary text-sm inline-flex items-center">
+                                <i data-lucide="github" class="w-4 h-4 mr-2"></i>View on GitHub
+                            </a>
+                            <a href="https://github.com/ronaldkanyepi/PersonalRAG" target="_blank" class="btn-primary text-sm inline-flex items-center">
+                                <i data-lucide="github" class="w-4 h-4 mr-2"></i>View on GitHub
+                            </a>
+                           
+                        </div>
+                    </div>
+                </div>
+                    <div class="project-card rounded-xl overflow-hidden group" data-categories="certificates">
+                        <img src="risk.png" alt="Risk Simulation" class="w-full h-56 ">
+                        <div class="p-6">
+                            <h3 class="project-title-mini">Goldman Sachs Risk Job Simulation</h3>
+                            <p class="text-gray-400 mb-3 text-sm leading-relaxed">
+                                I took part in Goldman Sachs' virtual job simulation to gain hands-on exposure to the quantitative side of finance. It was a risk-free opportunity to practice real-world tasks, apply analytical thinking, and build confidence in a professional setting. Through this experience, I developed practical skills, deepened my understanding of risk, and got a clearer view of the exciting career opportunities that exist within Goldman Sachs. Whether in finance or beyond, this simulation reinforced my drive to contribute meaningfully in high-impact environments.
+                            </p>
+                            <div class="project-tech-stack flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-sky-400 mb-4">
+                                <span class="font-semibold mr-1 text-gray-300">Skills:</span>
+                                <span>Risk assessment & mitigating</span>
+                                <span>Intepretation of risk assessments</span>
+                                <span>Quantitative modelling</span>
+                                <span>Financial data analysis</span>
+
+                            </div>
+                            <div class="flex space-x-3">
+                                <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/MBA4MnZTNFEoJZGnk/ETGMhLB5eCrYjcH8o_MBA4MnZTNFEoJZGnk_GbDDPmmuF4XD9tHKf_1745460198658_completion_certificate.pdf" target="_blank" class="btn-primary text-sm inline-flex items-center"><i data-lucide="github" class="w-4 h-4 mr-2"></i>View Certificate</a>
+                            </div>
+                        </div>
+                    </div>
+
+                      <div class="project-card rounded-xl overflow-hidden group" data-categories="certificates">
+                        <img src="cyber.png" alt="Cyber Simulation" class="w-full h-56 ">
+                        <div class="p-6">
+                            <h3 class="project-title-mini">Mastercard Cybersecurity Job Simulation</h3>
+                            <p class="text-gray-400 mb-3 text-sm leading-relaxed">
+                                The Forage Mastercard Cybersecurity course is a virtual internship that simulates a real-world job scenario where participants are tasked with analyzing a phishing email, designing a simulated phishing campaign to raise awareness, and interpreting the performance of the campaign to deliver effective phishing prevention training. This project provides hands-on experience in recognizing, preventing, and mitigating one of the most common cybersecurity threats faced by organizations today.
+                            </p>
+                            <div class="project-tech-stack flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-sky-400 mb-4">
+                                <span class="font-semibold mr-1 text-gray-300">Skills:</span>
+                                <span>Phishing Attacks</span>
+                                <span>Phishing Emails</span>
+                                <span>Cyber Training</span>
+                                <span>Mitigation</span>
+
+                            </div>
+                            <div class="flex space-x-3">
+                                <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/mfxGwGDp6WkQmtmTf/vcKAB5yYAgvemepGQ_mfxGwGDp6WkQmtmTf_GbDDPmmuF4XD9tHKf_1744685698683_completion_certificate.pdf" target="_blank" class="btn-primary text-sm inline-flex items-center"><i data-lucide="github" class="w-4 h-4 mr-2"></i>View Certificate</a>
+                            </div>
+                        </div>
+                    </div>
+
+    <div class="project-card rounded-xl overflow-hidden group" data-categories="certificates">
+                        <img src="cicy.png" alt="CISCO Cybersecurity" class="w-full h-56 ">
+                        <div class="p-6">
+                            <h3 class="project-title-mini">CISCO Introduction to Cybersecurity</h3>
+                            <p class="text-gray-400 mb-3 text-sm leading-relaxed">
+                                I completed an introductory course that provided a solid foundation in cybersecurity. I gained practical knowledge on how to protect my personal digital footprint and explored the major security challenges facing businesses, governments, and academic institutions today. This experience deepened my understanding of the growing demand for professionals who can secure and defend complex networks in an increasingly digital world.
+                            </p>
+                            <div class="project-tech-stack flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-sky-400 mb-4">
+                                <span class="font-semibold mr-1 text-gray-300">Skills:</span>
+                                <span>Risk detection</span>
+                                <span>Protection</span>
+                                <span>Risk awareness</span>
+                                <span>Mitigation</span>
+
+                            </div>
+                            <div class="flex space-x-3">
+                            <a href="https://www.credly.com/badges/490dbbdc-af9b-4f2e-a397-f3cd247e73ee/linked_in_profile" target="_blank" class="btn-primary text-sm inline-flex items-center">
+                                <img src="credly.png" alt="Credly" class="w-4 h-4 mr-2 inline-block object-contain"  title="Credly">View on Credly</a>
+                            </a>
+                
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card rounded-xl overflow-hidden group" data-categories="certificates">
+                        <img src="nsec.png" alt="CISCO Network" class="w-full h-56 ">
+                        <div class="p-6">
+                            <h3 class="project-title-mini">CISCO Network Security</h3>
+                            <p class="text-gray-400 mb-3 text-sm leading-relaxed">
+                                I completed a comprehensive course in Network Security that equipped me with practical, job-ready skills through 45 hands-on labs. I strengthened my ability to implement security measures, detect vulnerabilities, and respond to incidents while maintaining network integrity. This experience deepened my understanding of secure network design and enhanced my expertise in protecting data across complex environments.
+                            </p>
+                            <div class="project-tech-stack flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-sky-400 mb-4">
+                                <span class="font-semibold mr-1 text-gray-300">Skills:</span>
+                                <span>Hardening</span>
+                                <span>Monitoring</span>
+                                <span>Incident Response</span>
+                                <span>Vulnerability assessment</span>
+
+                            </div>
+                            <div class="flex space-x-3">
+                            <a href="https://www.credly.com/badges/7d6d9f5b-2945-4e0e-8306-799cd3258d59/linked_in_profile" target="_blank" class="btn-primary text-sm inline-flex items-center">
+                                <img src="credly.png" alt="Credly" class="w-4 h-4 mr-2 inline-block object-contain"  title="Credly">View on Credly</a>
+                            </a>
+                
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card rounded-xl overflow-hidden group" data-categories="certificates">
+                        <img src="lets.png" alt="SOC" class="w-full h-56 ">
+                        <div class="p-6">
+                            <h3 class="project-title-mini">Lets Defend SOC Fundamentals</h3>
+                            <p class="text-gray-400 mb-3 text-sm leading-relaxed">
+                                The SOC Fundamentals course provided a strong foundation for a career as a Security Operations Center (SOC) analyst. I gained practical skills in log management, EDR, and SOAR, while also developing a strategic mindset for effective incident response. By exploring SOC roles, responsibilities, and common analyst pitfalls, the course sharpened my ability to contribute proactively to cybersecurity operations in a constantly evolving threat landscape.
+                            </p>
+                            <div class="project-tech-stack flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-sky-400 mb-4">
+                                <span class="font-semibold mr-1 text-gray-300">Skills:</span>
+                                <span>Log analysis</span>
+                                <span>Endpoint monitoring</span>
+                                <span>SOAR integration</span>
+                                <span>Incident response</span>
+                                <span>Threat detection</span>
+
+                            </div>
+                            <div class="flex space-x-3">
+                            <a href="https://app.letsdefend.io/my-rewards/detail/375181bd-5586-4db3-8e71-3b4d2110144c" target="_blank" class="btn-primary text-sm inline-flex items-center">
+                                <img src="credly.png" alt="Credly" class="w-4 h-4 mr-2 inline-block object-contain"  title="Credly">View on Credly</a>
+                            </a>
+                
+                        </div>
+                        </div>
+                    </div>
+
+
+                    <div class="project-card rounded-xl overflow-hidden group" data-categories="volunteer">
+                          <img src="jersey.jpg" alt="Jersey Cares" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="project-title-mini">Jersey Cares</h3>
+                            <p class="text-gray-400 mb-3 text-sm leading-relaxed">
+                                Jersey Cares collaborates with nonprofit organizations, public schools, and government agencies to mobilize volunteers in impactful initiatives that address critical community needs, including food insecurity, environmental sustainability, educational access, and more.
+                            </p>
+                             <div class="project-tech-stack flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-sky-400 mb-4">
+                                <span class="font-semibold mr-1 text-gray-300">Skills:</span>
+                                <span>Giving back to the community</span>
+                                
+    
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="project-card rounded-xl overflow-hidden group" data-categories="volunteer">
+                        <img src="ptd.jpeg" alt="power to decide" class="w-full h-56 ">
+                        <div class="p-6">
+                            <h3 class="project-title-mini">Plan International: Power to Decide Research</h3>
+                            <p class="text-gray-400 mb-3 text-sm leading-relaxed">
+                                The research focused on accelerating adolescent girls' sexual and reproductive health and rights (SRHR) by examining the social determinants of their agency and empowerment. The study identified key factors that enabled girls to take control of their SRHR, particularly in contexts shaped by gender inequality, poverty, and violence. Through a global literature review and country case studies in Malawi and Zimbabwe, the research highlighted the impact of social norms, mobility restrictions, and economic insecurity on girls' decision-making. Its purpose was to inform gender-transformative policies and programs that addressed systemic gender discrimination, promoted girls' rights, and supported their ability to make informed choices about their bodies and futures. The research aimed to provide actionable recommendations for policymakers, donors, and civil society to create lasting change in girls' SRHR outcomes.
+                            </p>
+                            <div class="project-tech-stack flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-sky-400 mb-4">
+                                <span class="font-semibold mr-1 text-gray-300">Skills:</span>
+                                <span>Policy research</span>
+                                <span>Gender analysis</span>
+                                <span>Data synthesis</span>
+              
+                            </div>
+                            <div class="flex space-x-3">
+                            <a href="https://plan-uk.org/file/power-to-decide-plan-international-uk-november-2020/download?token=5_MCfW0z" target="_blank" class="btn-primary text-sm inline-flex items-center">
+                                <img src="plan.png" alt="report" class="w-4 h-4 mr-2 inline-block object-contain"  title="report">View Report</a>
+                            </a>
+                
+                        </div>
+                        </div>
+                    </div>
+
+
+                    <div class="project-card rounded-xl overflow-hidden group" data-categories="projects">
+                        <img src="web.png" alt="Web Analysis" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="project-title-mini">Web Traffic Analysis</h3>
+                            <p class="text-gray-400 mb-3 text-sm leading-relaxed">
+                                The Web Traffic Analysis Dashboard provides a comprehensive, visual representation of website performance metrics to support data-driven decision-making. It tracks key indicators such as page views, unique visitors, bounce rates, average session duration, and traffic sources. Using interactive visuals and filters, the dashboard allows users to analyze trends over time, compare user behavior across channels, and identify high-performing content or conversion bottlenecks. Built in Power BI, the dashboard enables real-time monitoring, supports segmentation by device, geography, or referral source, and offers actionable insights to optimize digital marketing strategies and enhance user engagement.
+                            </p>
+                            <div class="project-tech-stack flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-sky-400 mb-4">
+                                <span class="font-semibold mr-1 text-gray-300">Skills:</span>
+                                <span>Data visualisation</span>
+                                <span>DAX calculations</span>
+                                <span>Trend analysis</span>
+                                <span>Dashboard design</span>
+                                <span>Data integration</span>
+                            </div>
+                            <div class="flex space-x-3">
+                                <a href="https://github.com/mruvimbo/Web-Traffic-Analytics-Dashboard" target="_blank" class="btn-primary text-sm inline-flex items-center"><i data-lucide="github" class="w-4 h-4 mr-2"></i>View on GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card rounded-xl overflow-hidden group" data-categories="projects">
+                        <img src="sales.png" alt="Sales Analysis" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <h3 class="project-title-mini">Sales and Marketing Analysis</h3>
+                            <p class="text-gray-400 mb-3 text-sm leading-relaxed">
+                                The Sales and Marketing Analysis Dashboard offers a comprehensive view of business performance by integrating sales metrics with marketing insights. It tracks key indicators such as revenue growth, sales volume, customer acquisition cost, lead conversion rates, and campaign ROI. The dashboard enables users to identify top-performing products, evaluate marketing channel effectiveness, and monitor customer behavior across the sales funnel. Built in Power BI, it supports real-time analysis and segmentation by region, product, or customer type—empowering data-driven strategies that enhance sales efficiency, optimize marketing spend, and drive sustainable growth.
+                            </p>
+                            <div class="project-tech-stack flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-sky-400 mb-4">
+                                <span class="font-semibold mr-1 text-gray-300">Skills:</span>
+                                <span>Data visualisation</span>
+                                <span>DAX calculations</span>
+                                <span>Trend analysis</span>
+                                <span>Dashboard design</span>
+                                <span>Data integration</span>
+                            </div>
+                            <div class="flex space-x-3">
+                                <a href="https://github.com/mruvimbo/Sales-and-Marketing-Analysis-Dashboard-" target="_blank" class="btn-primary text-sm inline-flex items-center"><i data-lucide="github" class="w-4 h-4 mr-2"></i>View on GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact" class="py-20 md:py-32">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="section-title text-4xl font-bold">Get In Touch</h2>
+                </div>
+                <div class="max-w-2xl mx-auto panel p-8 md:p-12">
+                    <p class="text-center text-gray-400 mb-8">
+                      Open to opportunities, ideas, or a good chat—reach out!
+                    </p>
+                    <form id="contact-form" novalidate> <div class="mb-6" >
+                            <label for="name" class="block mb-2 text-sm font-medium text-gray-300">Full Name</label>
+                            <input type="text" id="name" name="name" class="w-full form-input" placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="email" class="block mb-2 text-sm font-medium text-gray-300">Email Address</label>
+                            <input type="email" id="email" name="email" class="w-full form-input" placeholder="Enter your email" value="" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block mb-2 text-sm font-medium text-gray-300">Message</label>
+                            <textarea id="message" name="message" rows="5" class="w-full form-textarea" placeholder="Your message..." required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn-primary text-lg w-full sm:w-auto">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+
+                     <!-- Custom Alert Modal -->
+    <div id="custom-alert" class="modal-hidden fixed inset-0 z-50 flex items-center justify-center p-4" style="background-color: rgba(0, 0, 0, 0.6);">
+        <!-- Modal content -->
+        <div id="custom-alert-content" class="w-full max-w-md p-8 rounded-lg shadow-2xl" style="background-color: var(--panel-bg); border: 1px solid var(--border-color); box-shadow: 0 0 30px var(--glow-color);">
+            <div class="text-center">
+
+                <svg class="w-16 h-16 mx-auto mb-4" style="color: var(--accent-primary);" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+
+                <h3 class="mb-2 text-2xl font-bold" style="color: var(--text-primary);">Form Temporarily Disabled</h3>
+
+                <p class="mb-6 text-md" style="color: var(--text-secondary);">This contact form has been temporarily disabled. For any inquiries, please contact Ruvimbo Mashinge directly:</p>
+
+
+                <div class="space-y-4 text-left bg-dark p-4 rounded-md" style="background-color: var(--bg-dark);">
+                    <p class="flex items-center">
+                        <svg class="w-5 h-5 mr-3" style="color: var(--accent-primary);" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.518.76a11.024 11.024 0 006.29 6.29l.76-1.518a1 1 0 011.06-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
+                        <a href="tel:+19173328016" class="hover:underline" style="color: var(--text-primary);">+1 917 332 8016</a>
+                    </p>
+                    <p class="flex items-center">
+                        <svg class="w-5 h-5 mr-3" style="color: var(--accent-primary);" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
+                        <a href="mailto:rrmashinge@gmail.com" class="hover:underline" style="color: var(--text-primary);">rrmashinge@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+            <button id="close-alert-btn" class="w-full px-4 py-2 mt-8 text-lg font-semibold rounded-lg" style="background-color: var(--accent-primary); color: var(--bg-dark);">Got it</button>
+        </div>
+    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-12 border-t" style="border-color: var(--border-color);">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400">
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="https://github.com/mruvimbo" target="_blank" class="text-gray-400 hover:accent-text transition duration-150">
+                    <i class="fab fa-github text-2xl"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/ruvimbo-mashinge-3ba47519b/" target="_blank" class="text-gray-400 hover:accent-text transition duration-150">
+                    <i class="fab fa-linkedin text-2xl"></i>
+                </a>
+        
+            </div>
+            <p class="text-sm">&copy; <span id="current-year"></span> Ruvimbo Mashinge. All rights reserved.</p>
+         
+
+        </div>
+    </footer>
+
+    <!-- Add Mobile Navigation -->
+    <nav class="mobile-nav">
+        <div class="mobile-nav-items">
+            <a href="#hero" class="mobile-nav-item active">
+                <i data-lucide="home"></i>
+                <span>Home</span>
+            </a>
+            <a href="#about" class="mobile-nav-item">
+                <i data-lucide="user"></i>
+                <span>About</span>
+            </a>
+            <a href="#skills" class="mobile-nav-item">
+                <i data-lucide="code"></i>
+                <span>Skills</span>
+            </a>
+            <a href="#portfolio" class="mobile-nav-item">
+                <i data-lucide="briefcase"></i>
+                <span>Work</span>
+            </a>
+            <a href="#contact" class="mobile-nav-item">
+                <i data-lucide="mail"></i>
+                <span>Contact</span>
+            </a>
+        </div>
+    </nav>
+
+    <script>
+        lucide.createIcons();
+
+        const navbar = document.getElementById('navbar');
+        const navbarInitialBg = 'transparent';
+        const navbarScrolledBg = 'rgba(3, 6, 12, 0.85)';
+
+        navbar.style.backgroundColor = navbarInitialBg;
+        navbar.style.backdropFilter = 'blur(10px)';
+        navbar.style.webkitBackdropFilter = 'blur(10px)';
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.style.backgroundColor = navbarScrolledBg;
+                navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.3)';
+                navbar.classList.add('py-2');
+                navbar.classList.remove('h-20');
+            } else {
+                navbar.style.backgroundColor = navbarInitialBg;
+                navbar.style.boxShadow = 'none';
+                navbar.classList.remove('py-2');
+                navbar.classList.add('h-20');
+            }
+        });
+
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuIcon = mobileMenuButton.querySelector('i');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const iconName = mobileMenu.classList.contains('hidden') ? 'menu' : 'x';
+            mobileMenuIcon.setAttribute('data-lucide', iconName);
+            lucide.createIcons();
+        });
+
+        document.querySelectorAll('#mobile-menu a, #navbar nav > a[href^="#"]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                if (link.getAttribute('href').startsWith('#')) {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuIcon.setAttribute('data-lucide', 'menu');
+                    lucide.createIcons();
+
+                    document.querySelectorAll('#navbar nav > a').forEach(navLink => navLink.classList.remove('active', 'accent-text'));
+                    const targetHref = link.getAttribute('href');
+                    const desktopLink = document.querySelector(`#navbar nav a[href="${targetHref}"]`);
+                    if(desktopLink) desktopLink.classList.add('active', 'accent-text');
+                }
+            });
+        });
+
+        const typedTextSpan = document.getElementById("typed-text");
+        const textArray = ["Cybersecurity Engineer", "Cybersecurity Analyst", "Data Privacy Analyst", "Information Security Analyst"];
+        const typingDelay = 120;
+        const erasingDelay = 60;
+        const newTextDelay = 2000;
+        let textArrayIndex = 0;
+        let charIndex = 0;
+
+        function type() {
+            if (typedTextSpan && charIndex < textArray[textArrayIndex].length) {
+                typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+                charIndex++;
+                setTimeout(type, typingDelay);
+            } else {
+                setTimeout(erase, newTextDelay);
+            }
+        }
+
+        function erase() {
+            if (typedTextSpan && charIndex > 0) {
+                typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
+                charIndex--;
+                setTimeout(erase, erasingDelay);
+            } else {
+                textArrayIndex = (textArrayIndex + 1) % textArray.length;
+                setTimeout(type, typingDelay + 500);
+            }
+        }
+        if (textArray.length && typedTextSpan) setTimeout(type, newTextDelay);
+
+        const currentYearSpan = document.getElementById('current-year');
+        if(currentYearSpan) currentYearSpan.textContent = new Date().getFullYear();
+
+        const sections = document.querySelectorAll("main section[id]");
+        const navLinks = document.querySelectorAll("#navbar nav > a[href^='#']");
+
+        window.addEventListener("scroll", navHighlighter);
+
+        function navHighlighter() {
+            let scrollY = window.pageYOffset;
+            let currentSectionId = "";
+            const headerHeight = document.getElementById('navbar').offsetHeight;
+            const offset = headerHeight + 20;
+
+            sections.forEach(current => {
+                const sectionHeight = current.offsetHeight;
+                const sectionTop = current.offsetTop - offset;
+                let sectionId = current.getAttribute("id");
+
+                if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                    currentSectionId = sectionId;
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove("active", "accent-text");
+                if (link.getAttribute("href") === `#${currentSectionId}`) {
+                    link.classList.add("active", "accent-text");
+                }
+            });
+
+            const mobileNavItems = document.querySelectorAll('.mobile-nav-item');
+            mobileNavItems.forEach(item => {
+                item.classList.remove('active');
+                const href = item.getAttribute('href').substring(1);
+                if (href === currentSectionId) {
+                    item.classList.add('active');
+                }
+            });
+
+            if (currentSectionId === "" && sections.length > 0 && scrollY < sections[0].offsetTop - offset) {
+                const heroLink = document.querySelector("#navbar nav a[href='#hero']");
+                const heroMobileItem = document.querySelector('.mobile-nav-item[href="#hero"]');
+                if (heroLink) heroLink.classList.add("active", "accent-text");
+                if (heroMobileItem) heroMobileItem.classList.add('active');
+            }
+        }
+        navHighlighter();
+
+        const filterButtons = document.querySelectorAll('#project-filters .filter-btn');
+        const projectCards = document.querySelectorAll('#projects-grid .project-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                const filterValue = button.getAttribute('data-filter');
+
+                projectCards.forEach(card => {
+                    const cardCategories = card.getAttribute('data-categories');
+                    if (filterValue === 'all' || (cardCategories && cardCategories.includes(filterValue))) {
+                        card.classList.remove('hidden-project');
+                        card.style.display = 'block';
+                    } else {
+                        card.classList.add('hidden-project');
+                        setTimeout(() => {
+                           if (card.classList.contains('hidden-project')) {
+                               card.style.display = 'none';
+                           }
+                        }, 400);
+                    }
+                });
+            });
+        });
+
+        // Add click handlers for mobile nav
+        const mobileNavItems = document.querySelectorAll('.mobile-nav-item');
+
+        function updateMobileNav() {
+            let scrollY = window.pageYOffset;
+            let currentSectionId = "";
+
+            sections.forEach(current => {
+                const sectionHeight = current.offsetHeight;
+                const sectionTop = current.offsetTop - 100;
+                let sectionId = current.getAttribute("id");
+
+                if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                    currentSectionId = sectionId;
+                }
+            });
+
+            mobileNavItems.forEach(item => {
+                item.classList.remove('active');
+                const href = item.getAttribute('href').substring(1);
+                if (href === currentSectionId) {
+                    item.classList.add('active');
+                }
+            });
+
+            if (currentSectionId === "" && sections.length > 0 && scrollY < sections[0].offsetTop - 100) {
+                const homeItem = document.querySelector('.mobile-nav-item[href="#hero"]');
+                if (homeItem) homeItem.classList.add('active');
+            }
+        }
+
+        window.addEventListener('scroll', updateMobileNav);
+        updateMobileNav();
+
+        // Add click handlers for mobile nav
+        mobileNavItems.forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = item.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+
+                if (targetSection) {
+                    // Calculate the offset needed to show the section title
+                    const headerHeight = document.getElementById('navbar').offsetHeight;
+                    const mobileNavHeight = document.querySelector('.mobile-nav').offsetHeight;
+                    const sectionTop = targetSection.offsetTop;
+                    const offset = headerHeight + 20; // Add 20px for some breathing room
+
+                    // Scroll to the section with the calculated offset
+                    window.scrollTo({
+                        top: sectionTop - offset,
+                        behavior: 'smooth'
+                    });
+
+                    // Update active states
+                    mobileNavItems.forEach(navItem => navItem.classList.remove('active'));
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Skills Carousel
+        const skillsTrack = document.getElementById('skillsTrack');
+        const prevButton = document.getElementById('prevSkill');
+        const nextButton = document.getElementById('nextSkill');
+        const dots = document.querySelectorAll('.skill-dot');
+        let currentIndex = 0;
+        let slidesPerView = window.innerWidth < 640 ? 1 : window.innerWidth < 1024 ? 2 : 3;
+        const totalSlides = 6; // Total number of skill categories
+        let maxIndex = totalSlides - slidesPerView;
+        let isAnimating = false;
+        let touchStartX = 0;
+        let touchEndX = 0;
+        let initialTouchX = 0;
+        let currentTranslate = 0;
+        let prevTranslate = 0;
+
+        function updateSlidesPerView() {
+            slidesPerView = window.innerWidth < 640 ? 1 : window.innerWidth < 1024 ? 2 : 3;
+            maxIndex = totalSlides - slidesPerView;
+            if (currentIndex > maxIndex) {
+                currentIndex = maxIndex;
+            }
+
+            // Update slide widths
+            const slides = document.querySelectorAll('.skill-slide');
+            slides.forEach(slide => {
+                if (window.innerWidth < 640) {
+                    slide.style.width = 'calc(100% - 2rem)';
+                } else if (window.innerWidth < 1024) {
+                    slide.style.width = 'calc(50% - 2rem)';
+                } else {
+                    slide.style.width = 'calc(33.333% - 2rem)';
+                }
+            });
+
+            updateCarousel();
+        }
+
+        function updateCarousel() {
+            if (isAnimating) return;
+            isAnimating = true;
+
+            const slideWidth = 100 / slidesPerView;
+            const translateX = currentIndex * slideWidth;
+            skillsTrack.style.transform = `translateX(-${translateX}%)`;
+
+            // Update dots
+            const totalDots = Math.ceil(totalSlides / slidesPerView);
+            dots.forEach((dot, index) => {
+                if (index < totalDots) {
+                    dot.style.display = 'block';
+                    dot.classList.toggle('bg-[var(--accent-primary)]', index === currentIndex);
+                    dot.classList.toggle('bg-gray-600', index !== currentIndex);
+                } else {
+                    dot.style.display = 'none';
+                }
+            });
+
+            setTimeout(() => {
+                isAnimating = false;
+            }, 500); // Match this with CSS transition duration
+        }
+
+        // Enhanced touch handling
+        skillsTrack.addEventListener('touchstart', (e) => {
+            if (isAnimating) return;
+            touchStartX = e.touches[0].clientX;
+            initialTouchX = touchStartX;
+            prevTranslate = currentTranslate;
+            skillsTrack.style.transition = 'none';
+        }, { passive: true });
+
+        skillsTrack.addEventListener('touchmove', (e) => {
+            if (isAnimating) return;
+            const currentX = e.touches[0].clientX;
+            const diff = currentX - initialTouchX;
+            const slideWidth = skillsTrack.offsetWidth / slidesPerView;
+            const translateX = prevTranslate + (diff / slideWidth) * 100;
+
+            // Add resistance at edges
+            if ((currentIndex === 0 && diff > 0) || (currentIndex === maxIndex && diff < 0)) {
+                currentTranslate = prevTranslate + (diff / slideWidth) * 50;
+            } else {
+                currentTranslate = translateX;
+            }
+
+            skillsTrack.style.transform = `translateX(${currentTranslate}%)`;
+        }, { passive: true });
+
+        skillsTrack.addEventListener('touchend', (e) => {
+            if (isAnimating) return;
+            touchEndX = e.changedTouches[0].clientX;
+            const diff = touchEndX - touchStartX;
+            const threshold = skillsTrack.offsetWidth * 0.2; // 20% of container width
+
+            skillsTrack.style.transition = 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
+
+            if (Math.abs(diff) > threshold) {
+                if (diff > 0 && currentIndex > 0) {
+                    currentIndex--;
+                } else if (diff < 0 && currentIndex < maxIndex) {
+                    currentIndex++;
+                }
+            }
+
+            currentTranslate = -(currentIndex * (100 / slidesPerView));
+            skillsTrack.style.transform = `translateX(${currentTranslate}%)`;
+            updateCarousel();
+        }, { passive: true });
+
+        prevButton.addEventListener('click', () => {
+            if (isAnimating || currentIndex <= 0) return;
+            currentIndex--;
+            updateCarousel();
+        });
+
+        nextButton.addEventListener('click', () => {
+            if (isAnimating || currentIndex >= maxIndex) return;
+            currentIndex++;
+            updateCarousel();
+        });
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                if (isAnimating || currentIndex === index) return;
+                currentIndex = index;
+                updateCarousel();
+            });
+        });
+
+
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => {
+                updateSlidesPerView();
+            }, 250);
+        });
+
+
+        updateSlidesPerView();
+        dots[0].classList.add('bg-[var(--accent-primary)]');
+
+
+
+        const contactForm = document.getElementById('contact-form');
+        const customAlert = document.getElementById('custom-alert');
+        const closeAlertBtn = document.getElementById('close-alert-btn');
+
+
+        contactForm.addEventListener('submit', function(event) {
+
+            event.preventDefault();
+
+
+            customAlert.classList.remove('modal-hidden');
+        });
+
+
+        function closeModal() {
+            customAlert.classList.add('modal-hidden');
+        }
+
+
+        closeAlertBtn.addEventListener('click', closeModal);
+
+
+        customAlert.addEventListener('click', function(event) {
+            if (event.target === customAlert) {
+                closeModal();
+            }
+        });
+
+    </script>
+</body>
+</html>
