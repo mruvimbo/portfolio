@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" font-family="Fira Code, Menlo, monospace">
+  <defs>
+    <pattern id="g" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.05"/>
+    </pattern>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b0b10"/>
+      <stop offset="1" stop-color="#16161f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="400" fill="url(#bg)"/>
+  <rect width="1200" height="400" fill="url(#g)"/>
+
+  <text x="60" y="78" fill="#71717a" font-size="18" letter-spacing="3">MS CYBERSECURITY · CAPSTONE</text>
+  <text x="60" y="130" fill="#fafafa" font-size="52" font-weight="700" font-family="Inter, Arial, sans-serif">RAID-SecOps</text>
+
+  <!-- pipeline -->
+  <g font-size="17" text-anchor="middle">
+    <rect x="60" y="200" width="220" height="80" rx="10" fill="#1e1e2e" stroke="#3f3f46"/>
+    <text x="170" y="236" fill="#fafafa">Splunk</text>
+    <text x="170" y="260" fill="#71717a" font-size="13">HEC · webhooks</text>
+
+    <rect x="340" y="200" width="220" height="80" rx="10" fill="#1e1e2e" stroke="#3f3f46"/>
+    <text x="450" y="236" fill="#fafafa">Hybrid ML</text>
+    <text x="450" y="260" fill="#71717a" font-size="13">UNSW-NB15</text>
+
+    <rect x="620" y="200" width="220" height="80" rx="10" fill="#1e1e2e" stroke="#3f3f46"/>
+    <text x="730" y="236" fill="#fafafa">MITRE ATT&amp;CK</text>
+    <text x="730" y="260" fill="#71717a" font-size="13">9 attack categories</text>
+
+    <rect x="900" y="200" width="240" height="80" rx="10" fill="#1e1e2e" stroke="#22c55e" stroke-opacity="0.6"/>
+    <text x="1020" y="236" fill="#fafafa">Role-aware output</text>
+    <text x="1020" y="260" fill="#71717a" font-size="13">SOC · Engineer · CISO</text>
+  </g>
+  <g stroke="#61afef" stroke-width="2" fill="#61afef">
+    <path d="M282 240H334"/><path d="M334 240l-8-5v10z"/>
+    <path d="M562 240H614"/><path d="M614 240l-8-5v10z"/>
+    <path d="M842 240H894"/><path d="M894 240l-8-5v10z"/>
+  </g>
+
+  <!-- human-in-the-loop branch -->
+  <path d="M450 282V330H620" stroke="#f59e0b" stroke-width="2" fill="none" stroke-dasharray="6 5"/>
+  <text x="632" y="336" fill="#f59e0b" font-size="15">uncertain → human review</text>
+
+  <circle cx="1080" cy="72" r="6" fill="#22c55e"/>
+  <text x="1070" y="78" fill="#4ade80" font-size="15" text-anchor="end">2,744 LIVE ALERTS SCORED</text>
+</svg>
